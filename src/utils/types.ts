@@ -4,5 +4,5 @@ export interface Product {
   price: number;
   details: string;
   images: string[];
-  features: {}[];
+  features: Map<string, string>[];
 }

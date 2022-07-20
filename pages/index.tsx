@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   }>(GET_PRODUCTS, {
     variables: {
       skip: 0,
-      limit: 200,
+      limit: 100,
     },
   });
 
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
     return (
       <div>
         <NavHeader />
-        <div className="wrap">
+        <div className="flex flex-wrap gap-2">
           {products.length == 0 && <div>No Products</div>}
           {products.map((product) => (
             <ShoeCard key={product.id} product={product} />
